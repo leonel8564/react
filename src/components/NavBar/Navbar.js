@@ -1,5 +1,6 @@
 import React from 'react'
 import {Container,Nav,Navbar,NavDropdown} from 'react-bootstrap'
+import Carrito from "../Carrito/Carrito";
 const Navbar1 = () => {
   return (
     <Navbar bg="light" expand="lg">
@@ -20,6 +21,7 @@ const Navbar1 = () => {
           <Nav.Link href="#link">nosotros</Nav.Link>
         </Nav>
       </Navbar.Collapse>
+      <Carrito count={9}/>
     </Container>
   </Navbar>
   )
