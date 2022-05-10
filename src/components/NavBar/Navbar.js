@@ -24,6 +24,7 @@ const Navbar1 = () => {
       <Carrito count={9}/>
     </Container>
   </Navbar>
+
   )
 }
 
