@@ -34,3 +34,12 @@ export const Productos = [
     
 ]
 
+export const task = new Promise((resolve,reject) =>{
+
+    setTimeout(()=>{
+
+        resolve(Productos);
+
+    },2000)
+
+}) 

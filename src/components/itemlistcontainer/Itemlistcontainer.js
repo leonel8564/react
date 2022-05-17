@@ -3,21 +3,12 @@ import { useEffect, useState } from "react";
 
 import Itemlist from "../itemlist/Itemlist";
 
-import {Productos} from '../../Data/Productos'
+import { task } from "../../Data/Productos";
 
 export default function Itemlistcontainer() {
 
     const[productos, setProductos]=useState([])
 
-    const task = new Promise((resolve,reject) =>{
-
-        setTimeout(()=>{
-
-            resolve(Productos);
-
-        },2000)
-
-    }) 
 
     useEffect(()=>{
 
