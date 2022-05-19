@@ -1,6 +1,7 @@
 import React from 'react'
 import {Container,Nav,Navbar,NavDropdown} from 'react-bootstrap'
 import Carrito from "../Carrito/Carrito";
+import { NavLink } from 'react-router-dom';
 const Navbar1 = () => {
   return (
     <Navbar bg="light" expand="lg">
@@ -9,8 +10,8 @@ const Navbar1 = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link href="#home">inicio</Nav.Link>
-          <Nav.Link href="#link">producto</Nav.Link>
+          <NavLink to="/">inicio</NavLink>
+          <NavLink to="/produc">productos</NavLink>
           <NavDropdown title="Ropa" id="basic-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Ropa hombre</NavDropdown.Item>
             <NavDropdown.Divider />

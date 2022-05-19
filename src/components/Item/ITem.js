@@ -1,5 +1,5 @@
-import {Card,Button} from 'react-bootstrap';
-
+import {Card} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 export default function Item ({producto}) {
 
     return(
@@ -20,7 +20,7 @@ export default function Item ({producto}) {
 
                 </Card.Text>
 
-                <Button variant="dark">ver mas</Button>
+                <Link to="/Produc/elem">ver mas</Link>
 
             </Card.Body>
 
