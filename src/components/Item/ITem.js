@@ -13,14 +13,12 @@ export default function Item ({producto}) {
                 <Card.Title>{producto.title}</Card.Title>
 
                 <Card.Text>
-
-                    <p>{producto.stock}</p>
-
-                    <p>{producto.price}</p>
-
+                    {producto.stock}
                 </Card.Text>
-
-                <Link to="/Produc/elem">ver mas</Link>
+                <Card.Text>
+                    {producto.price}
+                </Card.Text>
+                <Link to={`/product/${producto.id}`}>ver mas</Link>
 
             </Card.Body>
 

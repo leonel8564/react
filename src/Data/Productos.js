@@ -4,7 +4,8 @@ export const Productos = [
         title:"remera hombre negra",
         stock:3,
         price:3000,
-        image:"img/remneH.jpg"
+        image:"/img/remneH.jpg",
+        category:"Hombre"
 
     },
     {
@@ -12,7 +13,8 @@ export const Productos = [
         title:"remera mujer negra",
         stock:5,
         price:3000,
-        image:"img/remneM.jpg"
+        image:"/img/remneM.jpg",
+        category:"Mujer"
 
     },
     {
@@ -20,7 +22,8 @@ export const Productos = [
         title:"remera hombre blanca",
         stock:4,
         price:3000,
-        image:"img/remblH.jpg"
+        image:"/img/remblH.jpg",
+        category:"Hombre"
 
     },
     {
@@ -28,7 +31,8 @@ export const Productos = [
         title:"remera mujer blanca",
         stock:6,
         price:3000,
-        image:"img/remblM.jpg"
+        image:"/img/remblM.jpg",
+        category:"Mujer"
 
     }
     

@@ -13,11 +13,10 @@ export default function Itemdetail ({producto}) {
                 <Card.Title>{producto.title}</Card.Title>
 
                 <Card.Text>
-
-                    <p>{producto.stock}</p>
-
-                    <p>{producto.price}</p>
-
+                    {producto.stock}
+                </Card.Text>
+                <Card.Text>
+                    {producto.price}
                 </Card.Text>
 
             </Card.Body>

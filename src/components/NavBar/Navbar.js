@@ -13,11 +13,9 @@ const Navbar1 = () => {
           <NavLink to="/">inicio</NavLink>
           <NavLink to="/produc">productos</NavLink>
           <NavDropdown title="Ropa" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Ropa hombre</NavDropdown.Item>
+            <NavLink to="/category/Hombre">Ropa Hombre</NavLink>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.2">Ropa mujer</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.3">unisex</NavDropdown.Item>
+            <NavLink to="/category/Mujer">Ropa Mujer</NavLink>
           </NavDropdown>
           <Nav.Link href="#link">nosotros</Nav.Link>
         </Nav>
