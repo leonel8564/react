@@ -1,12 +1,25 @@
 import React from 'react'
+import { useEffect , useState} from "react";
+import { useParams } from 'react-router-dom'
+import { task } from "../../Data/Productos";
 export default function Itemcount(){
     const [count, setCount] = React.useState(1)
+    const[productos,setProductos]=useState([])
+    const {stock1} = useParams()
 
-    let stock = 10
+    useEffect(()=>{
+
+        task
+
+        .then((result)=>{setProductos(result.find((item)=>item.stock === Number(stock1)))})
+
+        .catch((error) =>console.log(error))
+
+    },[stock1])
 
     const sumar = () => {
 
-        if(count < stock){
+        if(count < stock1){
 
             setCount(count + 1 )
 
@@ -28,7 +41,7 @@ export default function Itemcount(){
 
     return(
 
-        <div>
+        <div >
 
         <input type="button" value="+" onClick={sumar} />
 

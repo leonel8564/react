@@ -1,4 +1,5 @@
 import {Card} from 'react-bootstrap';
+import Itemcount from '../itemcount/Itemcount';
 
 export default function Itemdetail ({producto}) {
 
@@ -20,7 +21,7 @@ export default function Itemdetail ({producto}) {
                 </Card.Text>
 
             </Card.Body>
-
+            <Itemcount/>
         </Card>
 
     );

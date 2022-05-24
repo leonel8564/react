@@ -20,7 +20,7 @@ const Navbar1 = () => {
           <Nav.Link href="#link">nosotros</Nav.Link>
         </Nav>
       </Navbar.Collapse>
-      <Carrito count={9}/>
+      <Carrito/>
     </Container>
   </Navbar>
 
