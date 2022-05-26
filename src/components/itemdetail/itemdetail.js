@@ -1,8 +1,16 @@
+import React, { useState } from 'react';
 import {Card} from 'react-bootstrap';
 import Itemcount from '../itemcount/Itemcount';
+import { useNavigate } from 'react-router-dom';
 
 export default function Itemdetail ({producto}) {
-
+    const [count, setCount] = React.useState(1)
+    const[Compra,setCompra] = useState(false)
+    const Navigate= useNavigate()
+    const onAdd = () =>{
+        console.log("funciona")
+        setCompra(true)
+    }
     return(
 
         <Card style={{ width: '18rem', border:"1px solid black" }}>
@@ -21,7 +29,7 @@ export default function Itemdetail ({producto}) {
                 </Card.Text>
 
             </Card.Body>
-            <Itemcount/>
+            {Compra ? <button onClick={()=>Navigate("/cart")}>ir al carrito</button>:<Itemcount stock={producto.stock} count={count} setCount={setCount} onAdd={onAdd}/>}
         </Card>
 
     );
