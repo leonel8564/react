@@ -1,6 +1,6 @@
 
 
-export default function Navbar2() {
+export default function Home() {
     return(
         <div>
             <h2>soy home</h2>
