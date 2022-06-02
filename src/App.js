@@ -1,13 +1,13 @@
-
 import Itemlistcontainer from "./components/itemlistcontainer/Itemlistcontainer";
 import Itemdetailconteiner from "./components/itemdetailconteiner/itemdetailconteiner";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Navbar1 from "./components/NavBar/Navbar";
 import Home from "./views/home/home";
 import Cart from "./views/cart/Cart";
+import { CartProvider } from "./context/CartContext";
 function App() {
   return (
-    <div className="App">
+    <CartProvider>
       <BrowserRouter>
         <Navbar1/>
         <Routes>
@@ -18,8 +18,7 @@ function App() {
           <Route exact path="/cart" element={<Cart/>}/>
         </Routes>
       </BrowserRouter>
-    </div>
+    </CartProvider>
   );
 }
-
 export default App;
