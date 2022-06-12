@@ -1,34 +1,33 @@
 
-import { useEffect, useState } from "react";
+import React, {useState } from "react";
 
 import Itemlist from "../itemlist/Itemlist";
 
-import { task } from "../../Data/Productos";
-
-import { useParams } from "react-router-dom";
+import { getFirestore , getDocs , collection, query, where,} from "firebase/firestore"
 
 
-export default function Itemlistcontainer() {
+export default function Itemlistcontainer({categoryid}) {
 
     const[productos, setProductos]=useState([])
-    
-    const {categoryid} = useParams()
 
-    useEffect(()=>{
-
-        task
-
-        .then((result)=>{
-            if(categoryid){
-                setProductos(result.filter((item)=>item.category === categoryid))
-            }
-            else{
-                setProductos(result)
-            }
-        })
-
-        .catch((error) =>console.log(error))
-
+    React.useEffect(()=>{
+        const db = getFirestore()
+        if(categoryid){
+            const q = query(collection(db,"productos"),
+                where("category","==",categoryid)
+            );
+            getDocs(q).then((snapshots) => {
+                if(snapshots.size === 0){
+                    console.log("no hay productos")
+                }
+                setProductos(snapshots.docs.map(doc=>({id:doc.id, ...doc.data()})))
+            });
+        }else{
+            const productRef = collection(db,"productos")
+            getDocs(productRef).then(snapshots =>{
+                setProductos(snapshots.docs.map(doc=>({id:doc.id, ...doc.data()})))
+            })
+        }
     },[categoryid])
 
     

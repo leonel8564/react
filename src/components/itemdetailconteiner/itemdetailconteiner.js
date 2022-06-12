@@ -1,15 +1,16 @@
-import {task } from "../../Data/Productos";
+
 import React,{useEffect,useState} from "react";
 import Itemdetail from "../itemdetail/itemdetail";
-import { useParams } from "react-router-dom";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
-const Itemdetailconteiner = () => {
+const Itemdetailconteiner = ({id}) => {
     const [producto , setdetalleprod] = useState({})
-    const {id} = useParams()
     useEffect(()=>{
-        task
-        .then((res) => setdetalleprod(res.find((item) => item.id === Number(id))))
-        .catch((error) => console.log(error))
+        const db= getFirestore()
+        const productRef = doc(db,"productos",id)
+            getDoc(productRef).then(snapshot =>{
+                setdetalleprod({id:snapshot.id, ...snapshot.data()})
+            })
     },[id])
     return(
         <Itemdetail producto={producto}/>
