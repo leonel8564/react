@@ -24,27 +24,11 @@ export default function Itemlistcontainer() {
             })
         }
     },[categoryid])
-
     console.log(productos)
     return(
-
-
-
         <div>
-
-
-
             <Itemlist productos={productos}/>   
-
-
-
         </div>
-
-
-
     )
-
-
-
 }
 

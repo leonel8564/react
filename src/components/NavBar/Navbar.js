@@ -13,11 +13,11 @@ const Navbar1 = () => {
           <NavLink to="/">inicio</NavLink>
           <NavLink to="/produc">productos</NavLink>
           <NavDropdown title="Ropa" id="basic-nav-dropdown">
-            <NavLink to="/category/1">Ropa Hombre</NavLink>
+            <NavLink to="/category/2">Ropa Hombre</NavLink>
             <NavDropdown.Divider />
-            <NavLink to="/category/2">Ropa Mujer</NavLink>
+            <NavLink to="/category/1">Ropa Mujer</NavLink>
           </NavDropdown>
-          <Nav.Link href="#link">nosotros</Nav.Link>
+          <NavLink to="/cart">carrito</NavLink>
         </Nav>
       </Navbar.Collapse>
       <Carrito/>

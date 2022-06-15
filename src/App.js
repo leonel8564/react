@@ -5,6 +5,7 @@ import Navbar1 from "./components/NavBar/Navbar";
 import Home from "./views/home/home";
 import Cart from "./views/cart/Cart";
 import { CartProvider } from "./context/CartContext";
+import Formula from "./components/formulario/Formulario";
 function App() {
   return (
     <CartProvider>
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/category/:categoryid" element={<Itemlistcontainer/>}/>
           <Route exact path="/product/:id" element={<Itemdetailconteiner/>}/>
           <Route exact path="/cart" element={<Cart/>}/>
+          <Route exact path="/formula" element={<Formula/>}/>
         </Routes>
       </BrowserRouter>
     </CartProvider>
