@@ -19,7 +19,6 @@ const navigate = useNavigate()
       : <>
         <p>No tenés productos en tu carrito! :( </p>
         <button onClick={()=>navigate('/produc')}>Ir a productos</button>
-        <button onClick={()=>navigate("/formula")}>terminar compra</button>
       </>
       }
     </div>
