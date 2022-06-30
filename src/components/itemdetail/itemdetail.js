@@ -23,25 +23,25 @@ export default function Itemdetail ({producto}) {
         addToCart(item)
     }
     return(
+        <div className='itemDetail'>
+            <Card style={{ width: '18rem', border:"1px solid black" }}>
 
-        <Card style={{ width: '18rem', border:"1px solid black" }}>
+                <Card.Img variant="top" src={producto.image} />
 
-            <Card.Img variant="top" src={producto.image} />
+                <Card.Body>
 
-            <Card.Body>
+                    <Card.Title>{producto.title}</Card.Title>
 
-                <Card.Title>{producto.title}</Card.Title>
+                    <Card.Text className='text'>
+                        {producto.stock}
+                    </Card.Text>
+                    <Card.Text className='text'>
+                        {producto.price}
+                    </Card.Text>
 
-                <Card.Text>
-                    {producto.stock}
-                </Card.Text>
-                <Card.Text>
-                    {producto.price}
-                </Card.Text>
-
-            </Card.Body>
-            {Compra ? <button onClick={()=>Navigate("/cart")}>ir al carrito</button>:<Itemcount stock={producto.stock} count={count} setCount={setCount} onAdd={onAdd}/>}
-        </Card>
-
+                </Card.Body>
+                {Compra ? <button onClick={()=>Navigate("/cart")}>ir al carrito</button>:<Itemcount stock={producto.stock} count={count} setCount={setCount} onAdd={onAdd}/>}
+            </Card>
+        </div>
     );
 }

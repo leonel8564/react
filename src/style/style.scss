@@ -15,19 +15,108 @@
     flex-direction: row;
 }
 .carritoItem{
-    width: 200px;
+    width: 165px;
     display: flex;
     flex-direction:column;
-    border: 1px solid black;
+    color: white;
+    margin: 10px;
 }
 .carrito{
-    width: 600px;
-    border: 1px solid black;
-    margin: 0% 30% 0% 30%;
+    width: 70%;
+    color: white;
+    
+    margin: 0% 15% 0% 15%;
+    background-color: gray;
+    
     
 }
 .ordenItems{
     display: flex;
     flex-direction:row;
     
+}
+
+.navlink{
+    color: black;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.navlink2{
+    color: black;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold; 
+}
+.listConeiner{
+    
+    display: flex; 
+    background-color:black;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: center;
+    height: 691px;
+}
+.card{
+    margin: 55px 20px 0% 20px;
+    background-color: gray;
+    height: 500px;
+}
+.imagen{
+    width: 285px;
+    height: 300px;
+}
+.buton{
+    color: white;
+}
+.text{
+    color: white;
+}
+.itemDetail{
+    border: 1px solid black;
+    display: flex; 
+    background-color:#bababa;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: center;
+    height: 691px;
+}
+.fondoCarrito{
+    background-color: black;
+    height: 691px;
+}
+.home{
+    background-color: black;
+    height: 691px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.form{
+    border: 1px solid black;
+    height:691px;
+    background-color: black;
+   
+}
+.form2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    width: 40%;
+    color: white;
+    background-color: gray;
+}
+.input{
+    margin: 10px;
+}
+.form3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30%;
+    width: 40%;
 }

@@ -26,7 +26,7 @@ export default function Itemlistcontainer() {
     },[categoryid])
     console.log(productos)
     return(
-        <div>
+        <div className="listConeiner">
             <Itemlist productos={productos}/>   
         </div>
     )

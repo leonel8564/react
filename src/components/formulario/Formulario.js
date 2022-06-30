@@ -96,34 +96,34 @@ export default function Formula(){
 
     return(
 
-        <div>
+        <div className="form">
 
             {!orderId
 
-                ?<form onSubmit={handleSumbit}>
+                ?<form onSubmit={handleSumbit} className="form2">
 
                     <h1>finalizar compra</h1>
 
-                    <input required type="text" name="nombre" placeholder="nombre" onChange={handleChange}/>
+                    <input required className="input" type="text" name="nombre" placeholder="nombre" onChange={handleChange}/>
 
-                    <input required type="text" name="apellido" placeholder="apellido" onChange={handleChange}/>
+                    <input required className="input" type="text" name="apellido" placeholder="apellido" onChange={handleChange}/>
 
-                    <input required type="email" name="email" placeholder="email" onChange={handleChange}/>
+                    <input required className="input" type="email" name="email" placeholder="email" onChange={handleChange}/>
 
-                    <input required type="phone" name="phone" placeholder="phone" onChange={handleChange}/>
+                    <input required className="input" type="phone" name="phone" placeholder="phone" onChange={handleChange}/>
 
-                    <input type="submit" value="Enviar"/>
+                    <input className="input" type="submit" value="Enviar"/>
 
                 </form>
 
                 :<>
+                    <div className="form3">
+                        <h1 className="text">Muchas gracias por tu compra!</h1>
 
-                <h1>Muchas gracias por tu compra!</h1>
+                        <h4 className="text">Tu orden es : {orderId}</h4>
 
-                <h4>Tu orden es : {orderId}</h4>
-
-                <button onClick={()=>navegar('/')}>Volver</button>
-
+                        <button variant="light" onClick={()=>navegar('/')}>Volver</button>
+                    </div>
                 </>}
 
         </div>

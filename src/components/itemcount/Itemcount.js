@@ -28,7 +28,7 @@ export default function Itemcount({stock,setCount,count,onAdd}){
 
     return(
         <>
-        <div >
+        <div className='text'>
 
         <input type="button" value="+" onClick={sumar} />
 

@@ -2,8 +2,8 @@
 
 export default function Home() {
     return(
-        <div>
-            <h2>soy home</h2>
+        <div className="home">
+            <h2 className="text">nombre de la tienda</h2>
         </div>
     )
 

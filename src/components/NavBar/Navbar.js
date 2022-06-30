@@ -10,14 +10,14 @@ const Navbar1 = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <NavLink to="/">inicio</NavLink>
-          <NavLink to="/produc">productos</NavLink>
-          <NavDropdown title="Ropa" id="basic-nav-dropdown">
-            <NavLink to="/category/2">Ropa Hombre</NavLink>
+          <NavLink className={"navlink"} to="/">Inicio</NavLink>
+          <NavLink className={"navlink"} to="/produc">Productos</NavLink>
+          <NavDropdown title="Ropa" className='navlink2'>
+            <NavLink className={"navlink"} to="/category/2">Ropa Hombre</NavLink>
             <NavDropdown.Divider />
-            <NavLink to="/category/1">Ropa Mujer</NavLink>
+            <NavLink className={"navlink"} to="/category/1">Ropa Mujer</NavLink>
           </NavDropdown>
-          <NavLink to="/cart">carrito</NavLink>
+          <NavLink className={"navlink"} to="/cart">Carrito</NavLink>
         </Nav>
       </Navbar.Collapse>
       <Carrito/>
